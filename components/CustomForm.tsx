@@ -2,16 +2,16 @@ import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 interface Props {
-    title: string;
+    form: string;
     onPress: ()=> void
 }
 
 
 
-export  default function CustomButton({title, onPress}: Props){
+export  default function CustomForm({form, onPress}: Props){
     return(
         <TouchableOpacity style={Styles.button} onPress={onPress}>
-            <Text style={Styles.text}>{title}</Text>
+            <Text style={Styles.text}>{form}</Text>
         </TouchableOpacity>
 
     )
@@ -28,3 +28,4 @@ const Styles = StyleSheet.create({
         textAlign: "center"
     }
 })
+
