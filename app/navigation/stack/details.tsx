@@ -1,10 +1,9 @@
 import React from "react";
 import { View } from "react-native";
-
-export default function SettingsScreen(){
+export default function detailsScreen(){
     return(
         <View>
-            Estou na tela de configuração 
+            estou na pagina de detalhes
         </View>
-    );
+    )
 }
