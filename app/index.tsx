@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import socket from "@/socket/socket";
 import { View, Text, TextInput, TouchableOpacity} from "react-native"
+import { styles } from "@/styles";
 
 
 export default function App() {
