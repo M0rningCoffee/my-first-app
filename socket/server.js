@@ -1,6 +1,6 @@
-const express = require("express")
-const  http = require("http")
-const {server } = require("socket.io")
+import express from "express";
+import http from "http";
+import {Server} from "socket.io";
 
 const app = express();
 const server = http.createServer(app);
@@ -15,7 +15,7 @@ io.on("connection", (socket) => {
     socket.on('send_message',({room, message})=> {
         io.to(room).emit('receive_message', { room,msg:message})
     })
-    socket.on(`disconect`, ()=> {
+    socket.on(`disconnect`, ()=> {
         console.log(`um cliente se conectou`)
     });
 });

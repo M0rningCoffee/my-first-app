@@ -4,7 +4,7 @@ import { View, Text, TextInput, TouchableOpacity} from "react-native"
 import { styles } from "@/styles";
 
 
-export default function App() {
+export default function HomeScreen() {
     const roomPrefix = 'chat';
 
     // Form 1
@@ -39,11 +39,11 @@ export default function App() {
         socket.emit('send_message', {
             room: targetRoom, message: msg
         })
-if (chat === '1') {
-    setMessage('');
-} else {
-    setMessage2('');
-}    
+            if (chat === '1') {
+                setMessage('');
+            } else {
+                setMessage2('');
+            }    
     };
 return (
     <View style={styles.container}>
@@ -91,7 +91,7 @@ return (
             </TouchableOpacity>
 
             <Text style={styles.receivedMessageTitle}>Mensagem recebida</Text>
-            <Text style={styles.receivedMessage2}>
+            <Text style={styles.receivedMessage}>
                 {receivedMessage2 || "nenhuma mensagem recebida"}
             </Text>
 
